@@ -1,9 +1,12 @@
+import { useLanguage } from '../context/LanguageContext';
+
 function Footer() {
+  const { t } = useLanguage();
   return (
-    <footer className="bg-lemon-bg py-12 border-t border-lemon-bg-dark/10">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="bg-black/20 backdrop-blur-sm py-6 border-t border-white/10 mt-auto">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-lemon-text/60 text-sm">
-          © 2026 Lemon Portfolio. All rights reserved.
+          {t.footer.rights}
         </div>
         <div className="flex gap-6">
           <a 
